@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Catalyst::ScriptRunner;
-Catalyst::ScriptRunner->run('WWW::Anvil', 'Create');
+Catalyst::ScriptRunner->run( 'WWW::Anvil', 'Create' );
 
 1;
 
