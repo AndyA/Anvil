@@ -1,0 +1,27 @@
+\.tmproj$
+\.tar\.gz$
+\B\.svn\b
+\B\.git\b
+^\.cvsignore
+^\.gitignore
+^\.prove
+
+# MB generated files and dirs
+^Build$
+^_build/
+
+# Temp, old and emacs backup files.
+~$
+^\.DS_Store
+\.(old|tmp|bak)$
+^#.*#$
+^\.#
+^cover_db
+^try[.]store$
+^TODO$
+\.swp$
+Session\.vim
+jslib
+^MYMETA\.yml$
+^andy/
+^blib/
