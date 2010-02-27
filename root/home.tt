@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Anvil</title>
+    <link type="text/css" 
+          href="static/css/custom-theme/jquery-ui-1.7.2.custom.css" 
+          rel="stylesheet" />	
+   <link type="text/css" 
+          href="static/css/style.css"
+          rel="stylesheet" />	
+    <script type="text/javascript" 
+            src="static/js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" i
+            src="static/js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="static/js/anvil.js"></script>
+    <script type="text/javascript">
+      $(function(){
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
