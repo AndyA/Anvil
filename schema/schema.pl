@@ -121,10 +121,11 @@ __DATA__
 revision: 1
 do:
   CREATE TABLE meta (
-    name TEXT NOT NULL,
-    value TEXT NOT NULL
+    id            SERIAL PRIMARY KEY,
+    name          TEXT NOT NULL,
+    value         TEXT NOT NULL
   );
-  INSERT INTO meta VALUES ( 'version', '1' );
+  INSERT INTO meta ( name, value ) VALUES ( 'version', '1' );
 undo:
   DROP TABLE meta;
 
@@ -155,24 +156,24 @@ do:
     PRIMARY KEY (video_id, tag_id)
   );
 
-  CREATE TABLE series (
+  CREATE TABLE show (
     id            SERIAL PRIMARY KEY,
     name          TEXT NOT NULL,
-    person_id       INTEGER REFERENCES person(id)
+    person_id     INTEGER REFERENCES person(id)
   );
 
-  CREATE TABLE video_series (
+  CREATE TABLE video_show (
     video_id      INTEGER REFERENCES video(id),
-    series_id     INTEGER REFERENCES series(id),
-    PRIMARY KEY (video_id, series_id)
+    show_id       INTEGER REFERENCES show(id),
+    PRIMARY KEY (video_id, show_id)
   );
 
 undo:
+  DROP TABLE video_tag;
+  DROP TABLE video_show;
   DROP TABLE video;
   DROP TABLE tag;
-  DROP TABLE video_tag;
+  DROP TABLE show;
   DROP TABLE person;
-  DROP TABLE series;
-  DROP TABLE video_series;
 
 
